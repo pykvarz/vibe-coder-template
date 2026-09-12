@@ -48,11 +48,15 @@ Stop and ask the user ONLY IF:
 Otherwise, make a reasonable assumption, state it briefly if it matters, and keep working.
 
 ## Final Verification
-Before claiming success, confirm:
-- [ ] The change is actually implemented.
-- [ ] Meaningful verification was run (build, test, or runtime check).
-- [ ] No unrelated files were unnecessarily changed.
-- [ ] If an error occurred, systematic debugging was used instead of random guessing.
+Before claiming success, confirm you have completed the following steps:
+1. Run the relevant code.
+2. Check actual runtime behavior.
+3. Inspect errors and logs when available.
+4. Test the affected user flow.
+5. Verify important state changes.
+6. Fix discovered problems.
+7. Do not claim success without evidence.
 
 ## Custom Commands
+- `/verify`: If the user types this, pause whatever you are doing and strictly run through the 7-step **Final Verification** checklist above for the recent changes. Provide a report of the evidence.
 - `/create-repo`: Automatically initialize a git repository, commit all files, and use the GitHub CLI (`gh repo create`) to push the project to a new remote repository. (e.g. `/create-repo private` or `/create-repo public`).
