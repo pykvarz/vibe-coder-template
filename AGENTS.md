@@ -53,3 +53,6 @@ Before claiming success, confirm:
 - [ ] Meaningful verification was run (build, test, or runtime check).
 - [ ] No unrelated files were unnecessarily changed.
 - [ ] If an error occurred, systematic debugging was used instead of random guessing.
+
+## Custom Commands
+- `/create-repo`: Automatically initialize a git repository, commit all files, and use the GitHub CLI (`gh repo create`) to push the project to a new remote repository. (e.g. `/create-repo private` or `/create-repo public`).
