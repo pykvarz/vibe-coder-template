@@ -12,8 +12,10 @@ This template orchestrates three powerful AI skills:
 - **[Frontend Design](.agents/skills/frontend-design/SKILL.md)**: The UI expert. Activated automatically for UI tasks, ensuring your interfaces look intentional, high-quality, and distinct (no generic AI templates).
 - **[Grilling](.agents/skills/grilling/SKILL.md)**: The interviewer. Run `/grill-me` or ask for an interview at the start of a complex project to rapidly extract requirements and align on the goal before coding.
 - **[Defensive Coding](.agents/skills/defensive-coding/SKILL.md)**: The security guard. Prevents the AI from generating vulnerable code (like SQL injections) and ensures basic security hygiene.
+- **[Memory Tracker](.agents/skills/memory-tracker/SKILL.md)**: The scribe. Automatically creates and updates a tiny `CONTEXT.md` file to remember the project's goal, tech stack, and state across sessions.
+- **[Ship It Fast](.agents/skills/ship-it-fast/SKILL.md)**: The deployer. Prioritizes the easiest, zero-config platforms (like Vercel or Render) so you can get your app live without touching heavy infrastructure.
 
-*(Note: Superpowers is loaded globally from the Antigravity IDE plugin system. The other four are installed directly in `.agents/skills/` for this workspace).*
+*(Note: Superpowers is loaded globally from the Antigravity IDE plugin system. The other six are installed directly in `.agents/skills/` for this workspace).*
 
 ## How the AI works here
 When you ask the AI to do something, it follows this lightweight process:

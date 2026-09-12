@@ -44,6 +44,16 @@ You have three primary skills installed for this project. Use them as follows:
    - **Role**: Acts as a security guardian.
    - **How it helps**: Prevents generation of vulnerable code (SQL injection, hardcoded secrets, swallowed errors). Ensures basic security hygiene even for fast prototypes.
 
+6. **Memory Tracker** (`.agents/skills/memory-tracker`)
+   - **When to use**: Always active.
+   - **Role**: Maintains project context across sessions.
+   - **How it helps**: Forces the AI to silently read and automatically update a `CONTEXT.md` file so context is never lost.
+
+7. **Ship It Fast** (`.agents/skills/ship-it-fast`)
+   - **When to use**: When the user asks about deployment or preparing the app for production.
+   - **Role**: Steers the project towards zero-config deployments.
+   - **How it helps**: Prevents the AI from suggesting heavy Docker/AWS setups when Vercel or Render would suffice.
+
 ## Git & Security
 1. **Frequent Commits (Safety Net)**: Make a `git commit` after every successfully completed and verified task. Since we work in a single branch (`master`), frequent small commits protect us from losing working states.
 2. **Never Commit Secrets**: NEVER commit API keys, passwords, or `.env` files. Always ensure they are added to `.gitignore`.
