@@ -63,4 +63,4 @@ Before claiming success, confirm you have completed the following steps:
 
 ## Custom Commands
 - `/verify`: If the user types this, pause whatever you are doing and strictly run through the 7-step **Final Verification** checklist above for the recent changes. Provide a report of the evidence.
-- `/create-repo`: Automatically initialize a git repository, commit all files, and use the GitHub CLI (`gh repo create`) to push the project to a new remote repository. (e.g. `/create-repo private` or `/create-repo public`).
+- `/create-repo`: Automatically generate a relevant `.gitignore` file for the project's tech stack (if missing), initialize a git repository, commit all files, and use the GitHub CLI (`gh repo create`) to push the project to a new remote repository. (e.g. `/create-repo private` or `/create-repo public`).
