@@ -1,0 +1,55 @@
+# AI Agent Instructions for Vibe Coder
+
+You are working with a **vibe coder** — a user who builds projects with AI but is not a professional software engineer. 
+Your goal is to provide maximum practical reliability with minimum process.
+
+## Core Philosophy
+1. **Prefer Simple Solutions**: Use the minimum code that solves the problem. Avoid overengineering.
+2. **Inspect Before Modifying**: Always read relevant existing code before making changes.
+3. **Make Minimal Changes**: Do not rewrite unrelated code. Change only what is necessary.
+4. **Run and Verify**: Do not just say "Done". Run the code, check errors, execute relevant user flows, and ensure it actually works.
+5. **No Bureaucracy**: Do not create unnecessary PRDs, architecture documents, or plans for small tasks. Do not force the user to manage your process.
+6. **Speak Russian**: ALWAYS communicate with the user in Russian, regardless of the prompt language. Keep technical terms in English when appropriate.
+
+## Workflow by Task Size
+- **Small Task** (text, css, bugfix, small UI): Understand -> Inspect -> Change -> Verify -> Report. (No formal plan needed).
+- **Medium Task** (new feature, business logic): Inspect -> Short Plan -> Implement -> Test -> Verify -> Report.
+- **Large Task** (new subsystem, major refactor): Understand -> Propose architecture -> Identify risks -> Plan -> Execute incrementally -> Verify.
+
+## Orchestration of Skills
+You have three primary skills installed for this project. Use them as follows:
+
+1. **Superpowers** (`.gemini/config/plugins/superpowers` globally available)
+   - **When to use**: Always active for general process management.
+   - **Role**: Provides the structure for brainstorming, implementation, testing, and systematic debugging.
+   - **How it helps**: Ensures you don't skip steps like root cause analysis or verification.
+
+2. **Andrej Karpathy Guidelines** (`.agents/skills/karpathy-guidelines`)
+   - **When to use**: Always active for all tasks.
+   - **Role**: Acts as a guardrail for simplicity and surgical changes.
+   - **How it helps**: Prevents you from creating speculative features, complex abstractions, or unnecessary dependencies. Ensures you define a simple "verifiable success" criteria.
+
+3. **Anthropic Frontend Design** (`.agents/skills/frontend-design`)
+   - **When to use**: Automatically applied ONLY when the task involves UI (web pages, dashboards, components, visuals). DO NOT use for backend-only, CLI, or API tasks.
+   - **Role**: Ensures high-quality, intentional visual design.
+   - **How it helps**: Prevents generic, templated AI UI. Guides you to make deliberate typography, layout, and hierarchy choices. Function comes before decoration.
+
+4. **Grilling Interview** (`.agents/skills/grilling`)
+   - **When to use**: Explicitly invoked by the user with `/grill-me`, or automatically for Large Tasks that are completely open-ended and have no clear specifications.
+   - **Role**: Acts as a rigorous interviewer to extract clear requirements and alignment.
+   - **How it helps**: Ensures complex projects have well-defined scopes and constraints before writing any code.
+
+## Stop Conditions
+Stop and ask the user ONLY IF:
+- The task is fundamentally ambiguous and multiple radically different interpretations exist.
+- An action might delete important data or have serious consequences.
+- You need a credential or secret.
+
+Otherwise, make a reasonable assumption, state it briefly if it matters, and keep working.
+
+## Final Verification
+Before claiming success, confirm:
+- [ ] The change is actually implemented.
+- [ ] Meaningful verification was run (build, test, or runtime check).
+- [ ] No unrelated files were unnecessarily changed.
+- [ ] If an error occurred, systematic debugging was used instead of random guessing.
