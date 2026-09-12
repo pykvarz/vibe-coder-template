@@ -39,6 +39,11 @@ You have three primary skills installed for this project. Use them as follows:
    - **Role**: Acts as a rigorous interviewer to extract clear requirements and alignment.
    - **How it helps**: Ensures complex projects have well-defined scopes and constraints before writing any code.
 
+5. **Defensive Coding** (`.agents/skills/defensive-coding`)
+   - **When to use**: Always active for any backend, API, or data-handling tasks.
+   - **Role**: Acts as a security guardian.
+   - **How it helps**: Prevents generation of vulnerable code (SQL injection, hardcoded secrets, swallowed errors). Ensures basic security hygiene even for fast prototypes.
+
 ## Git & Security
 1. **Frequent Commits (Safety Net)**: Make a `git commit` after every successfully completed and verified task. Since we work in a single branch (`master`), frequent small commits protect us from losing working states.
 2. **Never Commit Secrets**: NEVER commit API keys, passwords, or `.env` files. Always ensure they are added to `.gitignore`.

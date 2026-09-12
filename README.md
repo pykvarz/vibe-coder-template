@@ -11,8 +11,9 @@ This template orchestrates three powerful AI skills:
 - **[Karpathy Guidelines](.agents/skills/karpathy-guidelines/SKILL.md)**: The simplicity enforcer. Prevents the AI from adding unnecessary dependencies, premature abstractions, or overengineered architecture. Keeps changes small and surgical.
 - **[Frontend Design](.agents/skills/frontend-design/SKILL.md)**: The UI expert. Activated automatically for UI tasks, ensuring your interfaces look intentional, high-quality, and distinct (no generic AI templates).
 - **[Grilling](.agents/skills/grilling/SKILL.md)**: The interviewer. Run `/grill-me` or ask for an interview at the start of a complex project to rapidly extract requirements and align on the goal before coding.
+- **[Defensive Coding](.agents/skills/defensive-coding/SKILL.md)**: The security guard. Prevents the AI from generating vulnerable code (like SQL injections) and ensures basic security hygiene.
 
-*(Note: Superpowers is loaded globally from the Antigravity IDE plugin system. The other three are installed directly in `.agents/skills/` for this workspace).*
+*(Note: Superpowers is loaded globally from the Antigravity IDE plugin system. The other four are installed directly in `.agents/skills/` for this workspace).*
 
 ## How the AI works here
 When you ask the AI to do something, it follows this lightweight process:
